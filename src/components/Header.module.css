@@ -1,0 +1,36 @@
+.header {
+    background-color: gray;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.listaHeader {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.listaHeaderMobile {
+    display: none; /* Inicialmente escondido */
+}
+
+.listaHeader li {
+    margin-right: 3rem;
+}
+
+/* Media query para telas menores */
+@media (max-width: 640px) {
+    .listaHeader {
+        display: none;
+    }
+    .listaHeaderMobile {
+        display: flex; /* Mostra no mobile */
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+}
