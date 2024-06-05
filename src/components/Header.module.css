@@ -1,3 +1,5 @@
+
+
 .header {
     background-color: gray;
     padding: 1rem;
@@ -7,30 +9,69 @@
     width: 100%;
 }
 
-.listaHeader {
+.listaHeaderDesktop {
     list-style-type: none;
     display: flex;
     padding: 0;
     margin: 0;
+    align-items: center;
+}
+.mobileMenu{
+    display: none;
 }
 
-.listaHeaderMobile {
-    display: none; /* Inicialmente escondido */
-}
 
-.listaHeader li {
+.listaHeaderDesktop li {
     margin-right: 3rem;
 }
+.listaHeaderDesktop li a{
+    color: black;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.listaHeaderDesktop li a:hover{
+    color: white;
+}
+.searchMiles, .addMiles{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.hamburguerButton, .buttonCloseHeader{
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
 /* Media query para telas menores */
-@media (max-width: 640px) {
-    .listaHeader {
+@media (max-width: 768px) {
+    html{
+        font-size: 12px;
+    }
+    .header{
+        display: flex;
+        justify-content: space-around;
+    }
+    .listaHeaderDesktop {
         display: none;
     }
-    .listaHeaderMobile {
+    .mobileMenu{
         display: flex; /* Mostra no mobile */
         list-style-type: none;
         padding: 0;
         margin: 0;
+    }
+    .listaHeaderMobile{
+        display: none; /* Mostra no mobile */
+        list-style-type: none;
+        text-decoration: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .hamburguerButton{
+        display: block;
     }
 }
