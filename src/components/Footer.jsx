@@ -1,17 +1,14 @@
-import styles from './Footer.module.css'
+import React from 'react';
 
-function Footer(){
-    return(
-    <>
-        <footer className={styles.footer}>
-            <div>
-                <p className={styles.contentVuptFooter}><strong>Vupt!</strong></p>
-                <p className={styles.contentReserved}>© 2024. Todos os direitos reservados.</p>
-            </div>
-            <div/>
-        </footer>
-    </>
-    )
+function Footer() {
+  return (
+    <footer className="bg-gray-500 p-4 flex justify-center items-center w-full mt-auto">
+      <div className="text-center">
+        <p className="text-white"><strong>Vupt!</strong></p>
+        <p className="text-white">© 2024. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;
